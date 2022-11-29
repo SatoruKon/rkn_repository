@@ -1,0 +1,117 @@
+:root{
+   --main-hdr-txt-color:#17191C;
+   --main-p-txt-color: #2F353D; 
+   --main-tab-brd-color: #CBCBCB;
+   --main-max-width:45rem;
+   --main-font-family: Rubik;
+   --main-p-font-size: 1.125rem;
+}
+
+
+.main__headerwrapper{
+   margin: 0 auto;
+      
+   background-color: #c2d3e6;
+   padding-top: 2rem;
+   padding-bottom: 1.5rem;
+   font-family: var(--main-font-family);
+   font-style: normal;
+
+}
+
+.main__contentwrapper{
+   margin: 0 auto;
+      
+   max-width: var(--main-max-width);
+
+   padding-left: 1rem;
+   padding-right: 1rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+
+   font-family: var(--main-font-family);
+   font-style: normal;
+}
+
+.main__header1{
+   font-weight: 700;
+   font-size: 3rem;
+   line-height: 3.5rem;
+   text-align: center;
+   font-feature-settings: 'pnum' on, 'lnum' on;
+
+   color: var(--main-hdr-txt-color);   
+}
+
+.main__header2{
+   font-weight: 600;
+   font-size: 1.5rem;
+   line-height: 2rem;
+   /* identical to box height, or 133% */
+   font-feature-settings: 'pnum' on, 'lnum' on;
+   color: var(--main-hdr-txt-color);
+   padding-top: 2rem;
+   }
+
+
+.main__text{   
+     font-weight: 300;
+     font-size: var(--main-p-font-size);
+     line-height: 1.88rem;
+  
+     color: var(--main-p-txt-color);
+  }
+  
+  .main__list{
+     
+     font-weight: 400;
+     font-size: var(--main-p-font-size);
+     line-height: 2rem;
+     color: var(--main-p-txt-color);
+     list-style-type: disc;
+     
+  }
+  
+  
+  .main__table{
+     /* margin: 20px 10%; */
+     
+     font-weight: 300;
+     font-size: var(--main-p-font-size);
+     line-height: 1.88rem;
+     border-collapse: collapse;
+     table-layout: fixed;   
+     border-bottom: 1px solid var(--main-tab-brd-color);  
+  }
+  
+  th{
+     padding: 1.2rem; 
+     text-align: center;
+     border-bottom: 1px solid var(--main-tab-brd-color); 
+     }
+  
+  td{
+     
+     
+     /* padding: 0.5rem 1rem;*/
+     padding-left: 0.5rem;
+     padding-right: 0.5rem; 
+     text-align: center;
+     border-right: 1px solid var(--main-tab-brd-color);
+     border-left: 1px solid var(--main-tab-brd-color);
+
+  }
+  
+  
+  td:first-child{
+     text-align: left;
+  }
+
+ 
+  .main__image{
+      max-width: var(--main-max-width);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+  
