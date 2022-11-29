@@ -109,7 +109,8 @@
 
  
   .main__image{
-      max-width: var(--main-max-width);
+      /*max-width: var(--main-max-width); */
+      width: 100%;
       display: block;
       margin-left: auto;
       margin-right: auto;
