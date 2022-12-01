@@ -4,7 +4,15 @@
 @import url("/css/main.css");
 @import url("/css/font.css");
 
-
+.body{
+   font-family: var(--main-font-family);
+   font-style: normal;
+   font-size: var(--main-p-font-size);
+   font-weight: 300; 
+   line-height: 1.88rem;
+   color: var(--main-p-txt-color);
+   list-style-type: disc;
+}
 
 
 
