@@ -23,16 +23,7 @@
    background-color: #c2d3e6;
    padding-top: 2rem;
    padding-bottom: 1.5rem;
-
 }
-
-@media (max-width: 500px) {
-   .header{
-      padding-top: 1rem;
-      padding-bottom: 0.5rem;
-   }
-}
-
 
 .header__text{
     
@@ -45,25 +36,10 @@
       
 }
 
-@media (max-width: 500px) {
-   .header__text{
-      font-size: 2rem; 
-      line-height: 2.0rem;      
-   }
-}
-
-
-
 .main{
    margin: 2rem auto 1rem auto;
    max-width: var(--main-max-width);
    padding: 2rem 1rem 2rem 1rem;     
-}
-
-@media (max-width: 500px) {
-   .main{       
-      padding-top: 1rem;
-   }
 }
 
 .main__header{
@@ -73,12 +49,6 @@
    font-feature-settings: 'pnum' on, 'lnum' on;
    color: var(--main-hdr-txt-color);
    padding-top: 2rem;
-   }
-
-   @media (max-width: 500px) {
-      .main__header{       
-         padding-top: 1rem;
-      }
    }
 
 .main__image{      
@@ -99,12 +69,10 @@
   }
   
   .main__list{     
-     font-weight: 400;
-     
+     font-weight: 400;     
    }
   
-  
-  .main__table{
+    .main__table{
           
      border-collapse: collapse;
      table-layout: fixed;   
@@ -116,13 +84,7 @@
      text-align: center;
      border-bottom: 1px solid var(--main-tab-brd-color); 
      }
-
-   @media (max-width: 500px) {
-      .thead-main__table{       
-         padding: 0.5rem;
-      }
-   }
-  
+     
   .tdata-main__table{     
      padding-left: 0.5rem;
      padding-right: 0.5rem; 
@@ -130,13 +92,30 @@
      border-right: 1px solid var(--main-tab-brd-color);
      border-left: 1px solid var(--main-tab-brd-color);
    }
-
-   @media (max-width: 500px) {
-      .tdata-main__table{       
-         padding-top: 0.5rem;
-      }
-   }
-
+   
 .tdata-main__table:first-child{
      text-align: left;
   }
+
+  @media (max-width: 500px) {
+   .header{
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+   }
+   .header__text{
+      font-size: 2rem; 
+      line-height: 2.0rem;      
+   }
+   .main{       
+      padding-top: 1rem;
+   }
+   .main__header{       
+      padding-top: 1rem;
+   }
+   .thead-main__table{       
+      padding: 0.5rem;
+   }
+   .tdata-main__table{       
+      padding-top: 0.5rem;
+   }
+}
