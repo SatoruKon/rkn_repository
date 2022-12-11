@@ -100,7 +100,73 @@
      text-align: left;
   }
 
-  @media (max-width: 500px) {
+
+.main__blockreactionsrow{
+   text-align: center;
+   padding-top: 2rem;
+}
+
+.main__blockreactions{
+   display: inline-flex;
+   justify-content: space-between;
+   width: 430px;     
+}
+
+.main__blockreactions_content{
+
+}
+
+.icon-main__reactions{   
+   width: 48px;
+   height: 48px;
+   display: block;
+   position: relative;
+   left: 0px;
+
+   animation-name: mouse-on-like;
+      
+}
+
+.main__blockreactions_content:hover .icon-main__reactions{
+   animation-play-state:running;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   cursor: pointer;
+}
+
+
+@keyframes mouse-on-like{
+   0% { transform: translate(1px, 1px) rotate(0deg);
+   scale:100%; }
+   10% { transform: translate(-1px, -2px) rotate(-1deg); 
+   scale: 105%;
+   }
+   20% { transform: translate(-3px, 0px) rotate(1deg); 
+   scale:108%;
+   }
+   30% { transform: translate(3px, 2px) rotate(0deg);
+   scale: 110%;
+    }
+   40% { transform: translate(1px, -1px) rotate(1deg);
+   scale:114%;
+    }
+   50% { transform: translate(-1px, 2px) rotate(-1deg); 
+      scale:111%;}
+   60% { transform: translate(-3px, 1px) rotate(0deg);
+      scale:107%; }
+   70% { transform: translate(3px, 1px) rotate(-1deg);
+      scale:105%; }
+   80% { transform: translate(-1px, -1px) rotate(1deg);
+      scale:103%; }
+   90% { transform: translate(1px, 2px) rotate(0deg); 
+      scale:102%;}
+   100% { transform: translate(1px, -2px) rotate(-1deg); 
+      scale:100%;}  
+}
+
+
+
+@media (max-width: 500px) {
    .header{
       padding-top: 1rem;
       padding-bottom: 0.5rem;
@@ -124,16 +190,22 @@
       padding-top: 0.5rem;
       font-size: var(--main-p-res500-fontsize);
    }
+   .main__blockreactions{
+      width: 360px;
+   }
+   .icon-main__reactions{
+      width: 36px;
+      height: 36px;      
+   }
+}
 
    
    @media (max-width: 400px){
-
       .header__text{
          line-height: 2.0rem;
          font-size: 1.5rem;      
               
       }
-
       .thead-main__table{       
          font-size: var(--main-p-res400-fontsize);
          padding: 0.25rem;         
@@ -144,6 +216,12 @@
          padding: 0.25rem;
          
       }
+      .main__blockreactions{
+         width: 320px;
+      }
+      .icon-main__reactions{
+         width: 32px;
+         height: 32px;  
+      }
    }
 
-}
