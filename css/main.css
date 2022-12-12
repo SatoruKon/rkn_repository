@@ -21,10 +21,10 @@
 }
 
 .header{
-   margin: 2rem auto 1rem auto;      
+   margin: 2rem 0 1rem 0;      
    background-color: #c2d3e6;
    padding-top: 2rem;
-   padding-bottom: 1.5rem;
+   padding-bottom: 1rem;
 }
 
 .header__text{
@@ -123,15 +123,94 @@
    position: relative;
    left: 0px;
 
+   -moz-animation-name: mouse-on-like;
+   -webkit-animation-name: mouse-on-like;
    animation-name: mouse-on-like;
-      
+
+   -moz-animation-duration: 1s;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   
+   -moz-animation-play-state: paused;
+   -webkit-animation-play-state: paused;
+   animation-play-state:paused;
+   -moz-animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+   
+        
 }
 
 .main__blockreactions_content:hover .icon-main__reactions{
-   animation-play-state:running;
-   animation-duration: 2s;
-   animation-iteration-count: infinite;
+   -moz-animation-play-state: running;
+   -webkit-animation-play-state: running;
+   animation-play-state: running;
+    /*  
+   -moz-animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+*/
    cursor: pointer;
+}
+
+
+
+@-moz-keyframes mouse-on-like{
+   0% { transform: translate(1px, 1px) rotate(0deg);
+   scale:100%; }
+   10% { transform: translate(-1px, -2px) rotate(-1deg); 
+   scale: 105%;
+   }
+   20% { transform: translate(-3px, 0px) rotate(1deg); 
+   scale:108%;
+   }
+   30% { transform: translate(3px, 2px) rotate(0deg);
+   scale: 110%;
+    }
+   40% { transform: translate(1px, -1px) rotate(1deg);
+   scale:114%;
+    }
+   50% { transform: translate(-1px, 2px) rotate(-1deg); 
+      scale:111%;}
+   60% { transform: translate(-3px, 1px) rotate(0deg);
+      scale:107%; }
+   70% { transform: translate(3px, 1px) rotate(-1deg);
+      scale:105%; }
+   80% { transform: translate(-1px, -1px) rotate(1deg);
+      scale:103%; }
+   90% { transform: translate(1px, 2px) rotate(0deg); 
+      scale:102%;}
+   100% { transform: translate(1px, -2px) rotate(-1deg); 
+      scale:100%;}  
+}
+
+@-webkit-keyframes mouse-on-like{
+   0% { transform: translate(1px, 1px) rotate(0deg);
+   scale:100%; }
+   10% { transform: translate(-1px, -2px) rotate(-1deg); 
+   scale: 105%;
+   }
+   20% { transform: translate(-3px, 0px) rotate(1deg); 
+   scale:108%;
+   }
+   30% { transform: translate(3px, 2px) rotate(0deg);
+   scale: 110%;
+    }
+   40% { transform: translate(1px, -1px) rotate(1deg);
+   scale:114%;
+    }
+   50% { transform: translate(-1px, 2px) rotate(-1deg); 
+      scale:111%;}
+   60% { transform: translate(-3px, 1px) rotate(0deg);
+      scale:107%; }
+   70% { transform: translate(3px, 1px) rotate(-1deg);
+      scale:105%; }
+   80% { transform: translate(-1px, -1px) rotate(1deg);
+      scale:103%; }
+   90% { transform: translate(1px, 2px) rotate(0deg); 
+      scale:102%;}
+   100% { transform: translate(1px, -2px) rotate(-1deg); 
+      scale:100%;}  
 }
 
 
@@ -166,62 +245,4 @@
 
 
 
-@media (max-width: 500px) {
-   .header{
-      padding-top: 1rem;
-      padding-bottom: 0.5rem;
-   }
-   .header__text{
-      font-size: 2rem; 
-      line-height: 2.0rem; 
-           
-   }
-   .main{       
-      padding-top: 1rem;
-   }
-   .main__header{       
-      padding-top: 1rem;
-   }
-   .thead-main__table{       
-      padding: 0.5rem;
-      font-size: var(--main-p-res500-fontsize);
-   }
-   .tdata-main__table{       
-      padding-top: 0.5rem;
-      font-size: var(--main-p-res500-fontsize);
-   }
-   .main__blockreactions{
-      width: 360px;
-   }
-   .icon-main__reactions{
-      width: 36px;
-      height: 36px;      
-   }
-}
-
-   
-   @media (max-width: 400px){
-      .header__text{
-         line-height: 2.0rem;
-         font-size: 1.5rem;      
-              
-      }
-      .thead-main__table{       
-         font-size: var(--main-p-res400-fontsize);
-         padding: 0.25rem;         
-      }
-
-      .tdata-main__table{       
-         font-size: var(--main-p-res400-fontsize);
-         padding: 0.25rem;
-         
-      }
-      .main__blockreactions{
-         width: 320px;
-      }
-      .icon-main__reactions{
-         width: 32px;
-         height: 32px;  
-      }
-   }
 
