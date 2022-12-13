@@ -113,8 +113,31 @@
 }
 
 .main__blockreactions_content{
+/*
+   -moz-animation-name: mouse-on-like;
+   -webkit-animation-name: mouse-on-like;
+   animation-name: mouse-on-like;
 
+   -moz-animation-duration: 1s;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+      
+   -moz-animation-play-state: paused;
+   -webkit-animation-play-state: paused;
+   animation-play-state: paused;
+
+   -moz-animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+
+   */
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
 }
+
 
 .icon-main__reactions{   
    width: 48px;
@@ -123,38 +146,41 @@
    position: relative;
    left: 0px;
 
-   -moz-animation-name: mouse-on-like;
-   -webkit-animation-name: mouse-on-like;
-   animation-name: mouse-on-like;
 
-   -moz-animation-duration: 1s;
-   -webkit-animation-duration: 1s;
-   animation-duration: 1s;
-   
-   -moz-animation-play-state: paused;
-   -webkit-animation-play-state: paused;
-   animation-play-state:paused;
-   -moz-animation-iteration-count: 1;
-   -webkit-animation-iteration-count: 1;
-   animation-iteration-count: 1;
-   
+/*
+   -moz-animation-play-state:initial;
+   -webkit-animation-play-state: initial;
+   animation-play-state: initial;
+*/
+
         
 }
 
-.main__blockreactions_content:hover .icon-main__reactions{
+/*.main__blockreactions_content:hover
+*/
+.main__blockreactions_content:hover{
+   /*
+   -moz-animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+
    -moz-animation-play-state: running;
    -webkit-animation-play-state: running;
    animation-play-state: running;
-    /*  
+      
    -moz-animation-iteration-count: 1;
    -webkit-animation-iteration-count: 1;
    animation-iteration-count: 1;
 */
+   -webkit-transform: scale(1.3);
+   -ms-transform: scale(1.3);
+   transform: scale(1.3);
+
    cursor: pointer;
 }
 
 
-
+/*
 @-moz-keyframes mouse-on-like{
    0% { transform: translate(1px, 1px) rotate(0deg);
    scale:100%; }
@@ -243,6 +269,7 @@
       scale:100%;}  
 }
 
+*/
 
 
 

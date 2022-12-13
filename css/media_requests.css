@@ -56,7 +56,7 @@
    @media (max-width: 400px){
       .header__text{
          line-height: 2.0rem;
-         font-size: 1.5rem;      s              
+         font-size: 1.5rem;                 
       }
       .thead-main__table{       
          font-size: var(--main-p-res400-fontsize);
