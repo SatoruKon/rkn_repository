@@ -96,6 +96,14 @@
       .actuals__materialsbox h3{
          font-size: var(--main-p-res400-fontsize);
       }
+      .text-subscriptions__label{
+         font-size: var(--main-p-res400-fontsize);
+      }
+      .text-subscriptions__button{
+         
+         font-size: var(--main-p-res400-fontsize);
+         
+      }
    }
 
    @media (max-width: 350px){
@@ -108,5 +116,12 @@
       }
       .actuals__materialsbox h3{
          font-size: var(--main-p-res350-fontsize);
+      }
+      .text-subscriptions__label{
+         font-size: var(--main-p-res350-fontsize);
+      }
+      
+      .text-subscriptions__button{         
+         font-size: var(--main-p-res350-fontsize);         
       }
    }
