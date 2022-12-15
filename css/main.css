@@ -2,11 +2,13 @@
    --main-hdr-txt-color:#17191C;
    --main-p-txt-color: #2F353D; 
    --main-tab-brd-color: #CBCBCB;
+   --main-hdr-back-color:#c2d3e6;
    --main-max-width:45rem;
    --main-font-family: Rubik;
    --main-p-font-size: 1.125rem;
    --main-p-res500-fontsize: 1rem;
    --main-p-res400-fontsize: 0.75rem;
+   --main-p-res350-fontsize: 0.5rem;
    --main-adj-max-width:500px;
 }
 
@@ -22,7 +24,7 @@
 
 .header{
    margin: 2rem 0 1rem 0;      
-   background-color: #c2d3e6;
+   background-color: var(--main-hdr-back-color);
    padding-top: 2rem;
    padding-bottom: 1rem;
 }
@@ -145,15 +147,11 @@
    display: block;
    position: relative;
    left: 0px;
-
-
 /*
    -moz-animation-play-state:initial;
    -webkit-animation-play-state: initial;
    animation-play-state: initial;
-*/
-
-        
+*/        
 }
 
 /*.main__blockreactions_content:hover
@@ -178,6 +176,70 @@
 
    cursor: pointer;
 }
+
+.main__blockreactions{   
+   padding: 2rem 0rem 2rem 0rem;
+   
+}
+
+.actuals__container{
+   background-color: var(--main-hdr-back-color);
+   width: 100%;
+   text-align: center;
+   margin-bottom: 2rem;
+}
+.actuals__materialsheader{
+   text-align: center;
+   padding: 2rem 0rem 0rem 0rem;
+}
+.actuals__materialcontainer{
+   display: inline-flex;
+   justify-content: space-between;
+   max-width: 1026px;
+   padding: 0rem 0rem 2rem 0rem;
+   
+}
+.actuals__materialsbox{
+   background-color: white;
+   border-radius: 1rem;
+   flex-basis:328px;
+   height: 284px;
+   border-color: var(--main-hdr-back-color);
+   border-style: solid;
+   margin-left: 1rem;
+   margin-right: 1rem;   
+      
+}
+.actuals__materialsbox:first-child{
+
+}
+.actuals__materialsbox:nth-child(){
+   
+}
+.actuals__materialsbox h3{
+   text-align: left; 
+   font-size: var(--main-p-font-size);
+   
+   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+   
+   margin-top: 0rem;
+   /*
+   */
+}
+
+.actuals__pictur{
+   border-radius: 1rem 1rem 0rem 0rem;
+   width: 100%;
+}
+
+.actuals__materialsbox:hover{
+   border-style: solid;
+   border-color: rgba(143, 142, 151, 0.755);
+   box-shadow: 0.5rem;
+   cursor: pointer;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 
 
 /*
@@ -270,6 +332,4 @@
 }
 
 */
-
-
 
