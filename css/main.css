@@ -156,8 +156,9 @@
 
 /*.main__blockreactions_content:hover
 */
+/*
 .main__blockreactions_content:hover{
-   /*
+   
    -moz-animation-iteration-count: 1;
    -webkit-animation-iteration-count: 1;
    animation-iteration-count: 1;
@@ -169,16 +170,24 @@
    -moz-animation-iteration-count: 1;
    -webkit-animation-iteration-count: 1;
    animation-iteration-count: 1;
-*/
+
    -webkit-transform: scale(1.3);
    -ms-transform: scale(1.3);
    transform: scale(1.3);
 
    cursor: pointer;
 }
+*/
+
+.main__blockreactions_content:hover{
+   -webkit-transform: scale(1.15);
+   cursor: pointer;
+   animation-duration: 1s;
+   animation-name: mouse-on-like;
+}
 
 .main__blockreactions{   
-   padding: 2rem 0rem 2rem 0rem;
+   padding: 2rem 0rem 0rem 0rem;
    
 }
 
@@ -186,7 +195,7 @@
    background-color: var(--main-hdr-back-color);
    width: 100%;
    text-align: center;
-   margin-bottom: 2rem;
+   margin-bottom: 0rem;
 }
 .actuals__materialsheader{
    text-align: center;
@@ -206,16 +215,12 @@
    height: 284px;
    border-color: var(--main-hdr-back-color);
    border-style: solid;
+   border-style:none;
    margin-left: 1rem;
    margin-right: 1rem;   
       
 }
-.actuals__materialsbox:first-child{
 
-}
-.actuals__materialsbox:nth-child(){
-   
-}
 .actuals__materialsbox h3{
    text-align: left; 
    font-size: var(--main-p-font-size);
@@ -233,103 +238,189 @@
 }
 
 .actuals__materialsbox:hover{
+   /*
+   
    border-style: solid;
    border-color: rgba(143, 142, 151, 0.755);
+   */
    box-shadow: 0.5rem;
    cursor: pointer;
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+.subscriptions__row{
+   background-color: whitesmoke;
+   width: 100%;
+   
+   margin-bottom: 2rem;
+   margin-top: 0rem; 
+   height: 180px;
+   display: flex;
+   justify-content: center;
+   align-items: center;     
+}
+
+.subscriptions__body{   
+   max-width: var(--main-max-width);
+   display: flex;   
+   align-items: center;
+   justify-content:right;
+   padding: 0rem 0rem 0rem 0rem;
+   
+   /*
+   margin:0rem auto;
+   */
+}
 
 
-/*
+.subscriptions__label{   
+   max-width:291px;   
+   text-align: left;
+   justify-self: left;
+   align-self: left;
+   margin-left: 1rem;
+   
+}
+.text-subscriptions__label{
+   letter-spacing: -0.05rem;
+   line-height: 1;
+   font-size: var(--main-p-font-size);
+}
+
+.subscriptions__field{
+   width:233px;
+   height: 40px;
+   padding: 0 1rem 0 1rem;
+   
+}
+
+
+.input-subscriptions__field{
+   width: 100%;
+   border-radius: 0.3rem;
+   background-color: white; 
+   border-color: white;   
+}
+
+.input-subscriptions__field:hover{
+   box-shadow: 0.5rem;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.subscriptions__button{   
+   width: 114px;
+   height: 40px;
+   background-color:rgb(30, 46, 226);
+   border-radius: 0.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 1rem;
+   
+}
+.subscriptions__button:hover{   
+   background-color:rgb(101, 111, 231);
+   cursor: pointer;
+}
+.subscriptions__button:active {
+   background-color: rgb(0, 152, 25); 
+   
+} 
+
+.text-subscriptions__button{
+   color: white;
+   font-size: var(--main-p-res500-fontsize);
+   
+}
+
+
 @-moz-keyframes mouse-on-like{
    0% { transform: translate(1px, 1px) rotate(0deg);
    scale:100%; }
    10% { transform: translate(-1px, -2px) rotate(-1deg); 
    scale: 105%;
    }
-   20% { transform: translate(-3px, 0px) rotate(1deg); 
+   20% { transform: translate(-2px, 0px) rotate(1deg); 
    scale:108%;
    }
-   30% { transform: translate(3px, 2px) rotate(0deg);
+   30% { transform: translate(1px, 1px) rotate(0deg);
    scale: 110%;
     }
    40% { transform: translate(1px, -1px) rotate(1deg);
    scale:114%;
     }
-   50% { transform: translate(-1px, 2px) rotate(-1deg); 
+   50% { transform: translate(-1px, 1px) rotate(-1deg); 
       scale:111%;}
-   60% { transform: translate(-3px, 1px) rotate(0deg);
+   60% { transform: translate(-3px, 0px) rotate(0deg);
       scale:107%; }
-   70% { transform: translate(3px, 1px) rotate(-1deg);
+   70% { transform: translate(0px, 1px) rotate(-1deg);
       scale:105%; }
-   80% { transform: translate(-1px, -1px) rotate(1deg);
+   80% { transform: translate(2px, -1px) rotate(1deg);
       scale:103%; }
-   90% { transform: translate(1px, 2px) rotate(0deg); 
+   90% { transform: translate(1px, 1px) rotate(0deg); 
       scale:102%;}
-   100% { transform: translate(1px, -2px) rotate(-1deg); 
+   100% { transform: translate(1px, -1px) rotate(-1deg); 
       scale:100%;}  
 }
 
 @-webkit-keyframes mouse-on-like{
-   0% { transform: translate(1px, 1px) rotate(0deg);
-   scale:100%; }
-   10% { transform: translate(-1px, -2px) rotate(-1deg); 
-   scale: 105%;
-   }
-   20% { transform: translate(-3px, 0px) rotate(1deg); 
-   scale:108%;
-   }
-   30% { transform: translate(3px, 2px) rotate(0deg);
-   scale: 110%;
-    }
-   40% { transform: translate(1px, -1px) rotate(1deg);
-   scale:114%;
-    }
-   50% { transform: translate(-1px, 2px) rotate(-1deg); 
-      scale:111%;}
-   60% { transform: translate(-3px, 1px) rotate(0deg);
-      scale:107%; }
-   70% { transform: translate(3px, 1px) rotate(-1deg);
-      scale:105%; }
-   80% { transform: translate(-1px, -1px) rotate(1deg);
-      scale:103%; }
-   90% { transform: translate(1px, 2px) rotate(0deg); 
-      scale:102%;}
-   100% { transform: translate(1px, -2px) rotate(-1deg); 
-      scale:100%;}  
+      0% { transform: translate(1px, 1px) rotate(0deg);
+      scale:100%; }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); 
+      scale: 105%;
+      }
+      20% { transform: translate(-2px, 0px) rotate(1deg); 
+      scale:108%;
+      }
+      30% { transform: translate(1px, 1px) rotate(0deg);
+      scale: 110%;
+       }
+      40% { transform: translate(1px, -1px) rotate(1deg);
+      scale:114%;
+       }
+      50% { transform: translate(-1px, 1px) rotate(-1deg); 
+         scale:111%;}
+      60% { transform: translate(-3px, 0px) rotate(0deg);
+         scale:107%; }
+      70% { transform: translate(0px, 1px) rotate(-1deg);
+         scale:105%; }
+      80% { transform: translate(2px, -1px) rotate(1deg);
+         scale:103%; }
+      90% { transform: translate(1px, 1px) rotate(0deg); 
+         scale:102%;}
+      100% { transform: translate(1px, -1px) rotate(-1deg); 
+         scale:100%;}    
 }
 
 
 @keyframes mouse-on-like{
-   0% { transform: translate(1px, 1px) rotate(0deg);
-   scale:100%; }
-   10% { transform: translate(-1px, -2px) rotate(-1deg); 
-   scale: 105%;
-   }
-   20% { transform: translate(-3px, 0px) rotate(1deg); 
-   scale:108%;
-   }
-   30% { transform: translate(3px, 2px) rotate(0deg);
-   scale: 110%;
-    }
-   40% { transform: translate(1px, -1px) rotate(1deg);
-   scale:114%;
-    }
-   50% { transform: translate(-1px, 2px) rotate(-1deg); 
-      scale:111%;}
-   60% { transform: translate(-3px, 1px) rotate(0deg);
-      scale:107%; }
-   70% { transform: translate(3px, 1px) rotate(-1deg);
-      scale:105%; }
-   80% { transform: translate(-1px, -1px) rotate(1deg);
-      scale:103%; }
-   90% { transform: translate(1px, 2px) rotate(0deg); 
-      scale:102%;}
-   100% { transform: translate(1px, -2px) rotate(-1deg); 
-      scale:100%;}  
+      0% { transform: translate(1px, 1px) rotate(0deg);
+      scale:100%; }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); 
+      scale: 105%;
+      }
+      20% { transform: translate(-2px, 0px) rotate(1deg); 
+      scale:108%;
+      }
+      30% { transform: translate(1px, 1px) rotate(0deg);
+      scale: 110%;
+       }
+      40% { transform: translate(1px, -1px) rotate(1deg);
+      scale:114%;
+       }
+      50% { transform: translate(-1px, 1px) rotate(-1deg); 
+         scale:111%;}
+      60% { transform: translate(-3px, 0px) rotate(0deg);
+         scale:107%; }
+      70% { transform: translate(0px, 1px) rotate(-1deg);
+         scale:105%; }
+      80% { transform: translate(2px, -1px) rotate(1deg);
+         scale:103%; }
+      90% { transform: translate(1px, 1px) rotate(0deg); 
+         scale:102%;}
+      100% { transform: translate(1px, -1px) rotate(-1deg); 
+         scale:100%;}    
 }
 
-*/
+
 
