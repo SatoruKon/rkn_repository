@@ -1,7 +1,7 @@
 /* Стили */
 
-@import url("css/normalize.css");
-@import url("css/main.css");
-@import url("css/font.css");
-@import url("css/media_requests.css");
+@import url("normalize.css");
+@import url("main.css");
+@import url("font.css");
+@import url("media_requests.css");
 
