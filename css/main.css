@@ -23,7 +23,7 @@
 }
 
 .header{
-   margin: 2rem 0 1rem 0;      
+   margin: 0rem 0 1rem 0;      
    background-color: var(--main-hdr-back-color);
    padding-top: 2rem;
    padding-bottom: 1rem;
@@ -340,19 +340,219 @@
    margin-bottom: 0rem;
    margin-top: 0rem; 
    height: 64px;
+   top: 0em; 
+
    display: flex;
    justify-content: center;
-   align-items: center;     
+   align-items: center; 
+   
+   position: sticky;
+      
 }
 
 .nav__body{   
-   max-width: var(--main-max-width);
+   width: 1024px;
    display: flex;   
-   align-items: center;
-   justify-content:space-evenly;
+   align-items:center;
+   justify-content:space-between;
    padding: 0rem 0rem 0rem 0rem;
-      
+   margin: 0px auto;
+
+   border-color: red;
+   border-style: dotted;      
 }
+
+.nav__companynamelogo{
+   width: 180px;
+   display: flex; 
+   align-items:center;
+   justify-content:stretch;
+   
+
+   /*
+   flex: 0 0 60px;
+   border-color: green;
+   border-style: dotted;
+   */
+}
+.nav__body, .nav__companynamelogo:hover{
+   cursor: pointer;
+}
+
+
+.nav__WDlogo{
+   padding-left: 1rem;
+   
+}
+.nav__WDname{
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+
+/*----- Navigation Menue ---------------*/
+.nav__menue{
+   max-width: 480px;
+   
+   
+   border-color: rgb(65, 251, 4);
+   border-style: dotted;
+   background-color: whitesmoke;
+
+   font-weight: 400;
+   
+
+   /*
+display: flex; 
+   justify-content:stretch;
+   align-items:center;
+
+
+display: flex; 
+   float: left;
+   justify-content:stretch;
+   position: absolute;
+   */
+}
+.nav__menue ul{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+
+   border-color: blue;  
+   border-width: 1px;
+   border-style: solid;
+}
+
+.nav__menue ul li ul{
+   text-decoration: none;
+}
+
+.nav__menue li{
+   float: left;
+   text-align: center; 
+   list-style: none;
+   text-decoration: none;
+   padding: 0;
+   margin: 0;
+
+   border-color: red;  
+   border-width: 1px;
+   border-style: solid;
+
+}
+
+.nav__menue li ul li{
+   float: left;
+   text-align: center; 
+   list-style: none;
+   text-decoration: none;
+   padding: 0;
+   margin: 0;
+
+   border-color: #CBCBCB;
+   border-width: 1px;
+   border-style: solid;
+
+}
+
+
+.nav__menue a{							
+   padding-left: 1rem; 
+   padding-right: 0.5rem; 
+   text-decoration: none; 
+   color: rgb(46, 46, 46);
+   display: block;
+   }
+
+.nav__menue li:hover, a:hover {
+      background-color: rgb(186, 186, 186);
+      color: white;      
+      cursor: pointer;
+     
+}   
+
+.nav__menue li ul{
+   display: none;
+   height: auto;	
+   position: absolute;
+   margin: 0; 
+   padding: 0; 
+}
+   
+.nav__menue li:hover ul{
+      display:list-item;
+}
+
+.nav__menue li ul li{
+   background-color: rgb(147, 146, 146);
+   color: white;
+   }
+
+.nav__menue li ul li a:hover{
+      background-color: rgb(93, 93, 93);
+      
+      cursor: pointer;
+     
+
+}
+
+
+/*
+.nav__horlist {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: whitesmoke;
+   user-select: none;
+}
+
+.li-nav__horlist {
+   float: left;
+}
+
+.li-nav__horlist a {
+   display: block;
+   text-align: center;
+   padding: 0.2rem 0.4rem;
+   text-decoration: none;
+   color: var(--main-p-txt-color);
+}
+
+
+.li-nav__horlist a:hover {
+   background-color: rgb(151, 151, 151);
+   color: white;
+}
+
+
+.nav__menue a{
+   font-size: 1rem;
+   display: block;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+
+   border-color: rgb(5, 182, 114);
+   border-style: dotted;
+
+   
+}
+.nav__menue a:hover {
+   
+
+   box-shadow: 0.5rem;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+
+   -webkit-transform: scale(1.15);
+   cursor: pointer;
+   animation-duration: 2s;
+   
+}
+*/
+
+/*----- End of Navigation Menue ---------------*/
 
 .nav__button{   
    width: 114px;
@@ -363,6 +563,7 @@
    justify-content: center;
    align-items: center;
    margin-right: 1rem;
+   margin-left: 1rem;
    
 }
 .nav__button:hover{   
@@ -376,7 +577,106 @@
 .text-nav__button{
    color: white;
    font-size: var(--main-p-res500-fontsize);
+   user-select: none;
    
+}
+
+
+/*
+.sign-nav__burgerbox{
+   display: none;
+}
+*/
+
+/* ------------------- vertical menu */
+.nav__vertmenu{
+   display: none;
+   position:fixed;
+   top:0;
+   margin-top: 64px;
+   right: 0;
+   background-color: rgb(228, 228, 228);
+   /*
+   
+   width:50%;
+   */
+}
+
+.nav__vertmenu ul{
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   user-select: none;
+}
+.nav__vertmenu a{
+   padding: 0.5rem 1rem;
+   
+}
+
+.nav__vertmenu a:hover{
+   display: block;
+   background-color: rgb(130, 130, 130);
+   color: white;
+   cursor: pointer;
+}
+/* ------------------- end of vertial menu */
+
+/*--logic to open vertical menu ---*/
+
+.li-nav__horlist:first-child + .nav__vertmenu{
+   display: block;
+   animation: burger-click 1s ease;
+}
+
+/* =================================*/
+
+#burger, [for=burger]{
+   display: none;
+}
+
+.nav-burgermenu{
+   display: none;
+   position:fixed;
+   top:0;
+   margin-top: 64px;
+   right: 0;
+   background-color: rgb(228, 228, 228);
+   /*
+   
+   width:50%;
+   */
+}
+
+.nav-burgermenu ul{
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   user-select: none;
+}
+.nav-burgermenu a{
+   padding: 0.5rem 1rem;
+   
+}
+
+.nav-burgermenu a:hover{
+   display: block;
+   background-color: rgb(130, 130, 130);
+   color: white;
+   cursor: pointer;
+}
+
+#burger:checked + label + .nav-burgermenu{
+   display: block;
+   animation: burger-click 1s ease;
+}
+
+@keyframes burger-click{
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
 }
 
 @-moz-keyframes mouse-on-like{

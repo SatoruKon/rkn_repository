@@ -1,4 +1,54 @@
-@import url("/css/main.css");
+@import url("main.css");
+
+
+
+@media (max-width: 1200px) {
+   .nav__body{
+      max-width: 970px;
+   }
+}
+@media (max-width: 992px) {
+   .nav__body{
+      max-width: 850px;
+   }
+}
+
+@media (min-width: 796px) {
+   .nav-burgermenu{
+      display: none;
+   }
+}
+
+@media (max-width: 795px) {
+   .nav__body{
+      max-width: none;   
+   }
+   .nav__menue{
+      display: none;
+   }
+   [for=burger]{
+      display: block;
+      
+      scale: 1;
+      font-size: 2rem;
+      margin-right: 1rem;
+/*
+width: 30px;
+      text-align: center;
+      position:fixed;
+      
+      right: 20px;
+      top: 10px;
+*/
+
+   }
+   [for=burger]::before{
+      content: "☰";
+   }
+   #burger:checked + [for=burger]::before{
+      content: "⛒";
+   }
+}
 
 
 @media (max-width: 600px) {
@@ -67,6 +117,9 @@
        font-size: var(--main-p-res500-fontsize);
          
    }
+   .subscriptions__body{
+      flex-direction: column;
+   }
 }
 
    
@@ -124,4 +177,9 @@
       .text-subscriptions__button{         
          font-size: var(--main-p-res350-fontsize);         
       }
+      
+      .nav__button{
+         display: none;
+      }
+      
    }
