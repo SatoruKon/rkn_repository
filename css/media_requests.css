@@ -7,11 +7,25 @@
       max-width: 970px;
    }
 }
+
+@media (max-width: 1055px) {
+   
+   .footer__gridbody{
+      width: 90%;
+   }
+}
+
 @media (max-width: 992px) {
    .nav__body{
       max-width: 850px;
    }
+   .footer__gridbody{
+      width: 95%;
+   }
 }
+
+
+
 
 @media (min-width: 796px) {
    .nav-burgermenu{
@@ -48,6 +62,112 @@ width: 30px;
    #burger:checked + [for=burger]::before{
       content: "⛒";
    }
+
+   /*=========footer change 1 ===========*/
+
+   .footer__gridbody{
+      
+      grid-template-columns: [start] 1fr 0.3fr 0.7fr [col-end];
+      grid-template-rows: [start] 30px auto auto auto auto[row-end];
+      
+      
+      width: 95%;
+      margin: 1rem auto 1rem auto;
+   
+      row-gap: 1rem;
+      column-gap: 1.5rem 0rem ;
+   }
+   
+   
+   
+    
+   
+   .companynamelogo_footer__grid{      
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      
+   }
+   
+   .phonemeicons_footer__grid{      
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+         
+      border-right-style: solid;
+      border-right-color: aliceblue;
+      border-width: 0.1rem;   
+      
+   }
+      
+   
+   .phone_footer__grid{
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+      
+   }
+      
+   .menu_footer__grid{
+      grid-row: 2 / 4;
+      grid-column: 1 / 2;
+       
+   }
+   .sotialmediaicon_footer__grid{
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+
+      align-items: start;
+         
+   }
+     
+   
+   .email_footer__grid{
+      grid-row: 2 / 3;
+      grid-column: 2 / 4;
+      
+   }
+   
+   .address_footer__grid{
+      grid-row: 3 / 4;
+      grid-column: 2 / 4;
+      text-align: left;
+      
+      
+   }
+
+   .registration_footer__grid{
+      grid-row: 4 / 5;
+      grid-column: 2 / 4;
+            
+   }   
+   
+   .copyright_footer__grid{
+      grid-row: 6 / 7;
+      grid-column: 1 / 2;
+      
+   
+      border-top-style: solid;
+      border-top-color: aliceblue;
+      border-width: 0.1rem;
+   
+      font-size: var(--footer-smallertxt-res700-font-size);
+            
+   }
+   
+   .producedby_footer__grid{
+      grid-row: 6 / 7;
+      grid-column: 2 / 4;     
+   
+      border-top-style: solid;
+      border-top-color: aliceblue;
+      border-width: 0.1rem;
+   
+      font-size: var(--footer-smallertxt-res700-font-size);
+      
+   }
+
+   /*========end of Footer change 1 =========*/
+
+
+
 }
 
 
@@ -157,6 +277,109 @@ width: 30px;
          font-size: var(--main-p-res400-fontsize);
          
       }
+
+         /*=========footer change small 360 px res ===========*/
+
+   .footer__gridbody{
+      
+      grid-template-columns: [start] 1fr [col-end];
+      grid-template-rows: [start] 30px auto auto auto auto auto auto[row-end];
+            
+      width: 90%;
+      margin: 1rem 1rem 1rem 1rem;
+   
+      row-gap: 0.5rem;
+      
+   }
+    
+   .companynamelogo_footer__grid{      
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      
+   }
+
+   .menu_footer__grid{
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      
+      margin-bottom: 2rem;
+   }
+
+   
+
+   .phonemeicons_footer__grid{      
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+         
+      border-right-style: none;
+      border-right-color: aliceblue;
+      border-width: 0.1rem;   
+      
+   }
+    .phone_footer__grid{
+      grid-row: 5 / 6;
+      grid-column: 1 / 2;
+      margin-left: 0px;
+      
+   }
+
+   .email_footer__grid{
+      grid-row: 6 / 7;
+      grid-column: 1 / 2;
+      
+   }
+   
+   .address_footer__grid{
+      grid-row: 7 / 8;
+      grid-column: 1 / 2;
+            
+   }
+
+   .sotialmediaicon_footer__grid{
+      grid-row: 8 / 9;
+      grid-column: 1 / 2;
+
+      align-items: center;
+         
+   }
+     
+
+   .registration_footer__grid{
+      grid-row: 9 / 10;
+      grid-column: 1 / 2;
+
+      font-size: var(--footer-smallertxt-res700-font-size);
+            
+   }   
+   
+   .copyright_footer__grid{
+      grid-row: 10 / 11;
+      grid-column: 1 / 2;
+
+      text-align: center;
+         
+      border-top-style: solid;
+      border-top-color: aliceblue;
+      border-width: 0.1rem;
+   
+      font-size: var(--footer-samllertxt-font-size);
+            
+   }
+   
+   .producedby_footer__grid{
+      grid-row: 11 / 12;
+      grid-column: 1 / 2;     
+
+      text-align: center;
+   
+      border-top-style: none;
+         
+      font-size: var(--footer-samllertxt-font-size);
+      
+   }
+   
+   /*========end of Footer change for 360px device =========*/
+
    }
 
    @media (max-width: 350px){
