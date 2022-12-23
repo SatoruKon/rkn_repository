@@ -7,11 +7,47 @@
       max-width: 970px;
    }
 }
+
+@media (max-width: 1055px) {
+   
+   .footer__gridbody{
+      width: 90%;
+   }
+}
+
 @media (max-width: 992px) {
    .nav__body{
       max-width: 850px;
    }
+   .footer__gridbody{
+      width: 95%;
+   }
 }
+
+/* ------------ change of location for phone # -----*/
+@media (max-width: 900px) {
+
+   .footer__gridbody{
+      display:grid;
+      grid-template-columns: [start] 1fr 0.3fr 0.7fr 1fr [col-end];
+      grid-template-rows: [start] 30px auto auto auto [row-end];
+   
+      grid-template-areas: "companynamelogo phonemeicons phonemeicons sotialmediaicon"  
+                          "menu_footer phone phone registration"  
+                          "menu_footer email email registration"
+                          "menu_footer address address registration"
+                          "copyright copyright producedby producedby";
+               
+   }
+   .phonemeicons_footer__grid{
+      border-right-style: none;
+          
+   }
+   
+   /*========end of Footer change phone number =========*/
+
+}
+
 
 @media (min-width: 796px) {
    .nav-burgermenu{
@@ -29,25 +65,76 @@
    [for=burger]{
       display: block;
       
+      transform: scale(1);
       scale: 1;
       font-size: 2rem;
-      margin-right: 1rem;
-/*
-width: 30px;
-      text-align: center;
-      position:fixed;
-      
-      right: 20px;
-      top: 10px;
-*/
+      margin-right: 1rem;  
 
    }
    [for=burger]::before{
       content: "☰";
+      transition: 0.5s linear;
    }
    #burger:checked + [for=burger]::before{
       content: "⛒";
+      transition: 0.5s linear;
    }
+
+   /*=========footer change 1 ===========*/
+
+   .footer__gridbody{
+      
+      grid-template-columns: [start] 1fr 0.3fr 0.7fr [col-end];
+      grid-template-rows: [start] 30px auto auto auto auto[row-end];
+
+      grid-template-areas: "companynamelogo phonemeicons phone"
+                           "menu_footer email email"
+                           "menu_footer address address"
+                           "sotialmediaicon registration registration"
+                           "copyright producedby producedby";
+      
+      width: 95%;
+      margin: 1rem auto 1rem auto;
+   
+      row-gap: 1rem;
+      column-gap: 0rem ;
+   }
+
+   .phonemeicons_footer__grid{
+      border-right-style: solid;
+      border-width: 0.1rem; 
+      border-right-color: aliceblue;
+          
+   }
+   
+   .sotialmediaicon_footer__grid{
+      align-items: start;         
+   }
+           
+   .address_footer__grid{
+      text-align: left;  
+      
+   }
+   
+   .copyright_footer__grid{
+      
+      border-top-style: solid;
+      border-top-color: aliceblue;
+      border-width: 0.1rem;
+   
+      font-size: var(--footer-smallertxt-res700-font-size);            
+   }
+   
+   .producedby_footer__grid{
+      border-top-style: solid;
+      border-top-color: aliceblue;
+      border-width: 0.1rem;
+   
+      font-size: var(--footer-smallertxt-res700-font-size);      
+   }
+
+   /*========end of Footer change 1 =========*/
+
 }
 
 
@@ -72,6 +159,21 @@ width: 30px;
    .actuals__materialcontainer{
       
       flex-direction: column;
+   }
+
+   .footer__gridbody{     
+      grid-template-areas: "companynamelogo phonemeicons phonemeicons"
+                           "companynamelogo phone phone"
+                           "menu_footer email email"
+                           "menu_footer address address"
+                           "sotialmediaicon registration registration"
+                           "copyright producedby producedby";
+     
+   }
+
+   .phonemeicons_footer__grid{
+      border-right-style: none;
+          
    }
 
 }
@@ -157,6 +259,76 @@ width: 30px;
          font-size: var(--main-p-res400-fontsize);
          
       }
+
+         /*=========footer change small 360 px res ===========*/
+
+   .footer__gridbody{
+      
+      grid-template-columns: [start] 1fr [col-end];
+      grid-template-rows: [start] 30px auto auto auto auto auto auto[row-end];
+      
+      grid-template-areas: "companynamelogo"
+                           "menu_footer"
+                           "phonemeicons"
+                           "phone"
+                           "email"
+                           "address"
+                           "sotialmediaicon"
+                           "registration"
+                           "copyright"
+                           "producedby";
+
+      width: 90%;
+      margin: 1rem 1rem 1rem 1rem;   
+      row-gap: 0.5rem;
+      
+   }    
+
+   .menu_footer__grid{      
+      margin-bottom: 2rem;
+   }
+
+   
+
+   .phonemeicons_footer__grid{  
+      border-right-style: none;
+      border-right-color: aliceblue;
+      border-width: 0.1rem;   
+      
+   }
+    .phone_footer__grid{      
+      margin-left: 0px;
+      
+   }   
+
+   .sotialmediaicon_footer__grid{     
+      align-items: center;         
+   }
+     
+
+   .registration_footer__grid{      
+      font-size: var(--footer-smallertxt-res700-font-size);            
+   }   
+   
+   .copyright_footer__grid{
+      
+      text-align: center;         
+      border-top-style: solid;
+      border-top-color: aliceblue;
+      border-width: 0.1rem;   
+      font-size: var(--footer-samllertxt-font-size);
+            
+   }
+   
+   .producedby_footer__grid{      
+      text-align: center;   
+      border-top-style: none;         
+      font-size: var(--footer-samllertxt-font-size);
+      
+   }
+   
+   /*========end of Footer change for 360px device =========*/
+
    }
 
    @media (max-width: 350px){

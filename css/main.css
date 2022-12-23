@@ -10,6 +10,11 @@
    --main-p-res400-fontsize: 0.75rem;
    --main-p-res350-fontsize: 0.5rem;
    --main-adj-max-width:500px;
+   --footer-phone-font-size:1.125rem;
+   --footer-menue-font-size:1.125rem;
+   --footer-address-font-size:1rem;
+   --footer-samllertxt-font-size:0.875rem;
+   --footer-smallertxt-res700-font-size:0.75rem;
 }
 
 .body{
@@ -106,12 +111,14 @@
 .main__blockreactionsrow{
    text-align: center;
    padding-top: 2rem;
+   z-index: 2; 
 }
 
 .main__blockreactions{
    display: inline-flex;
    justify-content: space-between;
-   width: 430px;     
+   width: 430px;  
+     
 }
 
 .main__blockreactions_content{
@@ -181,6 +188,7 @@
 
 .main__blockreactions_content:hover{
    -webkit-transform: scale(1.15);
+   transform: scale(1.15);
    cursor: pointer;
    animation-duration: 1s;
    animation-name: mouse-on-like;
@@ -242,17 +250,19 @@
    
    border-style: solid;
    border-color: rgba(143, 142, 151, 0.755);
-   */
    box-shadow: 0.5rem;
+   */
+   
    cursor: pointer;
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transition: 1s;
 }
 
 .subscriptions__row{
    background-color: whitesmoke;
    width: 100%;
    
-   margin-bottom: 2rem;
+   margin-bottom: 0rem;
    margin-top: 0rem; 
    height: 180px;
    display: flex;
@@ -277,7 +287,10 @@
    max-width:291px;   
    text-align: left;
    justify-self: left;
+   /*
    align-self: left;
+*/
+
    margin-left: 1rem;
    
 }
@@ -303,8 +316,9 @@
 }
 
 .input-subscriptions__field:hover{
-   box-shadow: 0.5rem;
+   
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transition: 1s;
 }
 
 .subscriptions__button{   
@@ -319,11 +333,15 @@
    
 }
 .subscriptions__button:hover{   
-   background-color:rgb(101, 111, 231);
+   background-color:rgb(1, 153, 44);
+   color: #202328;
    cursor: pointer;
+   
+   transition: 1s;
 }
 .subscriptions__button:active {
-   background-color: rgb(0, 152, 25); 
+   background-color: rgb(190, 92, 0);
+   transition: 0.5s;
    
 } 
 
@@ -347,6 +365,8 @@
    align-items: center; 
    
    position: sticky;
+
+   z-index: 1;
       
 }
 
@@ -358,8 +378,7 @@
    padding: 0rem 0rem 0rem 0rem;
    margin: 0px auto;
 
-   border-color: red;
-   border-style: dotted;      
+     
 }
 
 .nav__companynamelogo{
@@ -393,35 +412,16 @@
 /*----- Navigation Menue ---------------*/
 .nav__menue{
    max-width: 480px;
-   
-   
-   border-color: rgb(65, 251, 4);
-   border-style: dotted;
    background-color: whitesmoke;
 
    font-weight: 400;
    
-
-   /*
-display: flex; 
-   justify-content:stretch;
-   align-items:center;
-
-
-display: flex; 
-   float: left;
-   justify-content:stretch;
-   position: absolute;
-   */
 }
 .nav__menue ul{
    margin: 0;
    padding: 0;
    text-decoration: none;
-
-   border-color: blue;  
-   border-width: 1px;
-   border-style: solid;
+   
 }
 
 .nav__menue ul li ul{
@@ -435,11 +435,6 @@ display: flex;
    text-decoration: none;
    padding: 0;
    margin: 0;
-
-   border-color: red;  
-   border-width: 1px;
-   border-style: solid;
-
 }
 
 .nav__menue li ul li{
@@ -458,7 +453,7 @@ display: flex;
 
 
 .nav__menue a{							
-   padding-left: 1rem; 
+   padding-left: 0.5rem;
    padding-right: 0.5rem; 
    text-decoration: none; 
    color: rgb(46, 46, 46);
@@ -466,9 +461,12 @@ display: flex;
    }
 
 .nav__menue li:hover, a:hover {
-      background-color: rgb(186, 186, 186);
-      color: white;      
+      background-color: rgb(186, 186, 186);           
       cursor: pointer;
+
+      color: #fff; /* Цвет текста */
+      background: #f66d52; /* Цвет фона */
+      transition: 0.5s linear;
      
 }   
 
@@ -567,12 +565,15 @@ display: flex;
    
 }
 .nav__button:hover{   
-   background-color:rgb(101, 111, 231);
+   background-color:rgb(1, 153, 44);
+   color: #202328;
    cursor: pointer;
+   
+   transition: 1s;
 }
 .nav__button:active {
-   background-color: rgb(0, 152, 25); 
-   
+   background-color: rgb(190, 92, 0);
+   transition: 0.5s;
 } 
 .text-nav__button{
    color: white;
@@ -634,6 +635,13 @@ display: flex;
    display: none;
 }
 
+.nav__checkbox:hover{
+   display: block;
+   scale: 1.1;
+   color: #0b02ff;
+   transition: 1s linear;
+}
+
 .nav-burgermenu{
    display: none;
    position:fixed;
@@ -661,14 +669,23 @@ display: flex;
 .nav-burgermenu a:hover{
    display: block;
    background-color: rgb(130, 130, 130);
-   color: white;
+   
    cursor: pointer;
+   
+
+   color: #fff; /* Цвет текста */
+   background: #f66d52; /* Цвет фона */
+   transition: 0.5s linear;
+
 }
 
 #burger:checked + label + .nav-burgermenu{
    display: block;
    animation: burger-click 1s ease;
+   transition: 0.5s linear;
 }
+
+
 
 @keyframes burger-click{
    0%{
@@ -767,5 +784,212 @@ display: flex;
          scale:100%;}    
 }
 
+.footer{
+   background-color: #202328;
+   color: aliceblue;
+   margin: 0px;
+   padding: 0px;
+   
+}
+.footer__container{
+      
+   padding-top: 2rem;
+   margin: 0px;
+/*
+margin-right: auto;
+   margin-left: 100px;
+*/
+
+}
+
+.footer__gridbody{
+   display:grid;
+   grid-template-columns: [start] 1fr 0.3fr 0.7fr 1fr [col-end];
+   grid-template-rows: [start] 30px auto auto auto [row-end];
+
+   grid-template-areas: "companynamelogo phonemeicons phone sotialmediaicon"  
+                       "menu_footer email email registration"  
+                       "menu_footer address address registration"
+                       "copyright copyright producedby producedby";
+
+   
+   width: 80%;
+   margin: 2rem auto 0rem auto;
+
+   row-gap: 1rem;
+   column-gap: 0rem;
+}
+
+
+.companynamelogo_footer__grid{   
+   grid-area: companynamelogo;
+   display: flex;   
+   align-items: center;   
+}
+
+.phonemeicons_footer__grid{
+   
+   grid-area: phonemeicons;
+   display: flex;
+   align-items: center;
+
+   border-right-style: solid;
+   border-right-color: aliceblue;
+   border-width: 0.1rem;   
+}
+   
+.phone_footer__grid{   
+   grid-area: phone;
+   
+   align-self: center;
+   padding-top: 0;
+   margin-top: 0px;
+   margin-left: 1rem;
+
+   font-size: var(--footer-phone-font-size);
+   font-weight: 500;   
+}
+
+.sotialmediaicon_footer__grid{
+   
+   grid-area: sotialmediaicon;
+  
+   display: flex;
+   align-items: center;
+}
+
+.menu_footer__grid{
+   grid-area: menu_footer;
+   width:100%;   
+}
+
+.menu_footer__grid ul{    
+   text-align: left;    
+   text-decoration: none;
+   padding: 0;
+   margin: 0;  
+
+   font-size: var(--footer-menue-font-size);
+   font-weight: 500;
+   line-height: 1.625rem;   
+      
+}
+
+.menu_footer__grid li{
+   text-decoration: none;
+   float:left;
+   list-style: none;
+   color: #CBCBCB;
+   padding:0rem 0.5rem;
+   display: block;
+   align-self: flex-start;
+   line-height: 200%;
+}
+
+.menu_footer__grid li:hover, a:hover {
+   background-color: rgb(200, 146, 146);
+   color: white;      
+   cursor: pointer;
+
+   transition: 1s;
+  
+}   
+
+.email_footer__grid{
+   grid-area: email;   
+   text-align: left;
+
+   font-size: var(--footer-phone-font-size);
+   font-weight: 500;
+}
+
+.registration_footer__grid{
+   grid-area: registration;
+
+   text-align: left;
+
+   font-size: var(--footer-samllertxt-font-size);
+   font-weight: 400;
+   line-height: 110%;
+}
+
+.address_footer__grid{
+   grid-area: address;
+   
+   text-align: left;
+   font-size: var(--footer-address-font-size);
+   font-weight: 300;
+}
+
+.copyright_footer__grid{
+   grid-area: copyright;
+   
+   text-align: left;
+   border-top-style: solid;
+   border-top-color: aliceblue;
+   border-width: 0.1rem;
+
+   font-size: var(--footer-samllertxt-font-size);
+   font-weight: 400;
+   
+}
+
+.producedby_footer__grid{
+   grid-area: producedby;
+   
+   text-align: right;
+
+   border-top-style: solid;
+   border-top-color: aliceblue;
+   border-width: 0.1rem;
+
+   font-size: var(--footer-samllertxt-font-size);
+   font-weight: 400;
+}
+
+.icon-footer__grid{
+   padding: 0rem 0.4rem;
+}
+
+/*-------------- эффект подчеркивания ссылки -----------*/
+
+.underline-one {
+	color: #2F353D; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: rgb(123, 165, 250); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 1s; /* Время эффекта */
+}
+
+.underline-one:hover {
+   color: #fff; /* Цвет текста */
+   background: #f66d52; /* Цвет фона */
+   transition: 0.5s linear;
+}
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: rgb(13, 0, 255); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+/*----------- end of underline effect ------------*/
 
 
