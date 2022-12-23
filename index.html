@@ -48,12 +48,12 @@
         <div class="nav__companynamelogo">
           <div class="nav__WDlogo">
               <img               
-              src = "img/svg WD logo.svg" 
+              src = "img/svgWDlogo.svg" 
               alt="WD logo"/> 
           </div>
           <div class="nav__WDname">
             <img             
-            src = "img/svg WD name.svg" 
+            src = "img/svgWDname.svg" 
             alt="WD name"/>
           </div>
 
@@ -61,7 +61,7 @@
         <div class="nav__menue">
           <ul>
             <li>
-              <a href="default.html">Программы ˅</a>
+              <a href="">Программы ˅</a>
               <ul>
                 <li><a href="#WebDev">Web-разработчик</a></li>
                 <li><a href="#Frontend">Frontend-разработчик</a></li>
@@ -127,11 +127,17 @@
     </header>
     <main class="main">
       <div>
-        <img
-          class="main__image"
-          src="img/AdobeStock_251001987.jpg"
-          alt="Header Image"
-        />
+        <picture>
+          <source srcset="img/AdobeStock_251001987@720.webp" type="image/webp" media="(min-width:992px)">
+          <source srcset="img/AdobeStock_251001987@480.webp" type="image/webp" media="(min-width:500px)">
+          <source srcset="img/AdobeStock_251001987@360.webp" type="image/webp" media="(max-width:499px)">
+          
+          <img
+            class="main__image"
+            src="img/AdobeStock_251001987@720.jpg"
+            alt="Header Image"
+          />
+        </picture>
         <p class="main__text">
           Вы определились с выбором своей профессии и уже твердо для себя
           решили, что хотите пойти в <b>ИТ сферу</b>, но у Вас остался вопрос
@@ -297,11 +303,20 @@
         <a target="_blank" href="https://ru.wikipedia.org/wiki/Sketch">Sketch</a
         >.
       </p>
-      <img
+      
+
+      <picture>        
+        <source srcset="img/AdobeStock_303349366@720.webp" type="image/webp" media="(min-width:992px)">
+        <source srcset="img/AdobeStock_303349366@480.webp" type="image/webp" media="(min-width:500px)">
+        <source srcset="img/AdobeStock_303349366@360.webp" type="image/webp" media="(max-width:499px)">
+
+
+        <img
         class="main__image"
-        src="img/AdobeStock_303349366.jpg"
+        src="img/AdobeStock_303349366@720.jpg"
         alt="Web design img"
-      >
+        >
+      </picture>
 
       <h2 class="main__header" id="UX/UI">UX/UI-дизайнер</h2>
       <p class="main__text">
@@ -447,6 +462,7 @@
           <td class="tdata-main__table">1 319</td>
         </tr>
       </table>
+      
       <div class="main__blockreactionsrow">
         <div class="main__blockreactions">        
           <div class="main__blockreactions_content">            
@@ -464,32 +480,32 @@
           <div class="main__blockreactions_content">
             <img 
             class="icon-main__reactions"
-            src = "img/svgSmiling face with hearts 1.svg.svg" 
+            src = "img/svgSmiling-face-with-hearts1.svg" 
             alt="smiling with harts"/>            
           </div>
           <div class="main__blockreactions_content">
             <img 
             class="icon-main__reactions"
-            src = "img/svgFace with tears of joy.svg" 
+            src = "img/svgFace-with-tears-of-joy.svg" 
             alt="tears of joy"/>            
           </div>
 
           <div class="main__blockreactions_content">
             <img 
             class="icon-main__reactions"
-            src = "img/svgAstonished face.svg" 
+            src = "img/svgAstonished-face.svg" 
             alt="Astonished face"/>            
           </div>
           <div class="main__blockreactions_content">            
             <img 
             class="icon-main__reactions"
-            src = "img/svgSad but relieved face 1.svg.svg" 
+            src = "img/svgSad-but-relieved-face.svg" 
             alt="Sad but relieved"/>            
           </div>  
           <div class="main__blockreactions_content">                          
             <img 
             class="icon-main__reactions"
-            src = "img/svgPouting face.svg" 
+            src = "img/svgPouting-face.svg" 
             alt="Pouting face"/>            
           </div>          
         </div>
@@ -507,27 +523,41 @@
 
         <div class="actuals__materialcontainer">
           <div class="actuals__materialsbox">
-            <img
-            class="actuals__pictur"
-            src="img/Rectangle 948.jpg"
-            alt="Img find job"
-            />
+            
+            <picture>
+              <source srcset="img/Rectangle948.webp" type="image/webp">
+              <img
+              class="actuals__pictur"
+              src="img/Rectangle948sm.jpg"
+               alt="Img find job"
+              />            
+            </picture>
+            
             <h3>Как найти работу в ИТ — план действий</h3>
           </div>
           <div class="actuals__materialsbox">
-            <img
-            class="actuals__pictur"
-            src="img/Rectangle 949.jpg"
-            alt="Img prgmmer skills"
-            />
+            
+            <picture>
+              <source srcset="img/Rectangle949.webp" type="image/webp">
+              <img
+              class="actuals__pictur"
+              src="img/Rectangle949sm.jpg"
+              alt="Img prgmmer skills"
+              />            
+            </picture>
+
             <h3>Какие навыки нужны программисту?</h3>
           </div>
-          <div class="actuals__materialsbox">
-            <img
-            class="actuals__pictur"
-            src="img/Rectangle 950.jpg"
-            alt="Img prgmr langs"
-            />
+          <div class="actuals__materialsbox">            
+            <picture>
+              <source srcset="img/Rectangle950.webp" type="image/webp">
+              <img
+              class="actuals__pictur"
+              src="img/Rectangle950sm.jpg"
+              alt="Img prgmr langs"
+              />            
+            </picture>
+
             <h3>Краткий обзор языков программирования</h3>
           </div>
         </div>
@@ -548,12 +578,104 @@
           </div>
         </div>
       </div>
-      
-
-    
+          
   
-    <footer>
-      <p></p>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__grid">
+          <div class="footer__gridbody">
+            <div class="companynamelogo_footer__grid">
+                <div class="icon-footer__grid">
+                    <img               
+                    src = "img/svgWDlogo.svg" 
+                    alt="WD logo"/> 
+                </div>
+                <div class="icon-footer__grid">
+                  <img             
+                  src = "img/svgWD-name-white.svg" 
+                  alt="WD name"/>
+                </div>
+      
+            </div>
+            <div class="phonemeicons_footer__grid">
+                  <div class="icon-footer__grid">
+                      <img               
+                      src = "img/svg-phone.svg" 
+                      alt="Phone icon"/> 
+                  </div>
+                  <div class="icon-footer__grid">
+                    <img             
+                    src = "img/svg-telegram.svg" 
+                    alt="Telegram icon"/>
+                  </div>
+                  <div class="icon-footer__grid">
+                    <img             
+                    src = "img/svg-whatsup.svg" 
+                    alt="whatsup icon"/>
+                  </div>    
+            </div>
+            <div class="phone_footer__grid">
+                  <p>+ 375 29 369-00-77</p>
+            </div>
+            <div class="sotialmediaicon_footer__grid">
+                  <div class="icon-footer__grid">
+                      <img               
+                      src = "img/svg-instagram.svg" 
+                      alt="Instagram icon"/> 
+                  </div>
+                  <div class="icon-footer__grid">
+                    <img             
+                    src = "img/svg-linkedin.svg" 
+                    alt="linkedin icon"/>
+                  </div>
+                  <div class="icon-footer__grid">
+                    <img             
+                    src = "img/svg-world.svg" 
+                    alt="world icon"/>
+                  </div>
+                  <div class="icon-footer__grid">
+                    <img             
+                    src = "img/svg-Be.svg" 
+                    alt="Be icon"/>
+                  </div>        
+            </div>
+            <div class="menu_footer__grid">
+              <ul>
+                <li><a href="" style="color: white">Программы ˅</a></li>    
+                <li><a href="" style="color: white">Навыки</a></li>
+                <li><a href="" style="color: white">Блог</a></li>
+                <li><a href="" style="color: white">Лаборатория</a></li>
+              </ul>          
+            </div>
+            
+            <div class="email_footer__grid">
+              <p>mentoring@webdad.by</p>
+            </div>
+
+            <div class="registration_footer__grid">
+              <p>Свидетельство о гос. регистрации № 291667035 от 26.10.2020</p>
+              <p>Политика конфиденциальности</p>
+              <p>Пользовательское соглашение</p>
+            </div>
+            <div class="address_footer__grid">
+              <p>224016, Республика Беларусь, 
+              <br>г. Брест, ул. Куйбышева, д.9, оф.217
+              </p>
+            </div>
+            <div class="copyright_footer__grid">
+              <p>© Webdad Upgrade 2021</p>
+            </div>
+            <div class="producedby_footer__grid">
+              <p>Сайт сделан и обслуживается студентами Webdad Upgrade</p>
+            </div>
+            
+
+          </div>
+
+
+        </div>
+
+      </div>
     </footer>
   
   </body> 
