@@ -250,8 +250,9 @@
    
    border-style: solid;
    border-color: rgba(143, 142, 151, 0.755);
-   */
    box-shadow: 0.5rem;
+   */
+   
    cursor: pointer;
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
@@ -285,7 +286,10 @@
    max-width:291px;   
    text-align: left;
    justify-self: left;
+   /*
    align-self: left;
+*/
+
    margin-left: 1rem;
    
 }
@@ -311,7 +315,7 @@
 }
 
 .input-subscriptions__field:hover{
-   box-shadow: 0.5rem;
+   
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
