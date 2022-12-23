@@ -73,9 +73,11 @@
    }
    [for=burger]::before{
       content: "☰";
+      transition: 0.5s linear;
    }
    #burger:checked + [for=burger]::before{
       content: "⛒";
+      transition: 0.5s linear;
    }
 
    /*=========footer change 1 ===========*/

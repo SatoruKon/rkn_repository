@@ -255,6 +255,7 @@
    
    cursor: pointer;
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transition: 1s;
 }
 
 .subscriptions__row{
@@ -317,6 +318,7 @@
 .input-subscriptions__field:hover{
    
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transition: 1s;
 }
 
 .subscriptions__button{   
@@ -331,11 +333,15 @@
    
 }
 .subscriptions__button:hover{   
-   background-color:rgb(101, 111, 231);
+   background-color:rgb(1, 153, 44);
+   color: #202328;
    cursor: pointer;
+   
+   transition: 1s;
 }
 .subscriptions__button:active {
-   background-color: rgb(0, 152, 25); 
+   background-color: rgb(190, 92, 0);
+   transition: 0.5s;
    
 } 
 
@@ -455,9 +461,12 @@
    }
 
 .nav__menue li:hover, a:hover {
-      background-color: rgb(186, 186, 186);
-      color: white;      
+      background-color: rgb(186, 186, 186);           
       cursor: pointer;
+
+      color: #fff; /* Цвет текста */
+      background: #f66d52; /* Цвет фона */
+      transition: 0.5s linear;
      
 }   
 
@@ -556,12 +565,15 @@
    
 }
 .nav__button:hover{   
-   background-color:rgb(101, 111, 231);
+   background-color:rgb(1, 153, 44);
+   color: #202328;
    cursor: pointer;
+   
+   transition: 1s;
 }
 .nav__button:active {
-   background-color: rgb(0, 152, 25); 
-   
+   background-color: rgb(190, 92, 0);
+   transition: 0.5s;
 } 
 .text-nav__button{
    color: white;
@@ -623,6 +635,13 @@
    display: none;
 }
 
+.nav__checkbox:hover{
+   display: block;
+   scale: 1.1;
+   color: #0b02ff;
+   transition: 1s linear;
+}
+
 .nav-burgermenu{
    display: none;
    position:fixed;
@@ -650,14 +669,23 @@
 .nav-burgermenu a:hover{
    display: block;
    background-color: rgb(130, 130, 130);
-   color: white;
+   
    cursor: pointer;
+   
+
+   color: #fff; /* Цвет текста */
+   background: #f66d52; /* Цвет фона */
+   transition: 0.5s linear;
+
 }
 
 #burger:checked + label + .nav-burgermenu{
    display: block;
    animation: burger-click 1s ease;
+   transition: 0.5s linear;
 }
+
+
 
 @keyframes burger-click{
    0%{
@@ -862,6 +890,8 @@ margin-right: auto;
    background-color: rgb(200, 146, 146);
    color: white;      
    cursor: pointer;
+
+   transition: 1s;
   
 }   
 
@@ -921,7 +951,45 @@ margin-right: auto;
    padding: 0rem 0.4rem;
 }
 
+/*-------------- эффект подчеркивания ссылки -----------*/
+
+.underline-one {
+	color: #2F353D; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
 
 
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: rgb(123, 165, 250); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 1s; /* Время эффекта */
+}
+
+.underline-one:hover {
+   color: #fff; /* Цвет текста */
+   background: #f66d52; /* Цвет фона */
+   transition: 0.5s linear;
+}
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: rgb(13, 0, 255); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+/*----------- end of underline effect ------------*/
 
 
